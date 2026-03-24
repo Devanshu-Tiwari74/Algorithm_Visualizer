@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>AlgViz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="vis-network.min.css">
+  <link rel="stylesheet" href="daa.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <h1>AlgViz</h1>
+
+      <h3>DYNAMIC PROGRAMMING</h3>
+      <button>Bellman-Ford</button>
+      <button>Matrix Chain Multiplication</button>
+
+      <h3>GREEDY ALGORITHMS</h3>
+      <button>Fractional Knapsack</button>
+      <button>Dijkstra's Algorithm</button>
+      <button>Prim's Algorithm</button>
+      <button>Kruskal's Algorithm</button>
+      <button>Activity Selection</button>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+      <div class="top-bar">
+        <h1>Algorithm Visualizer & Performance Analyzer</h1>
+        <p>Bellman-Ford • Dynamic Programming</p>
+      </div>
+
+      <div class="content">
+
+        <!-- LEFT INPUT PANEL -->
+        <div class="input-panel">
+          <h3>PROBLEM INPUT</h3>
+
+          <label>Vertices Count (V)</label>
+          <input type="text" value="4">
+
+          <label>Edges (u,v,w)</label>
+          <input type="text" value="0,1,10; 0,2,20; 1,3,5; 2,3">
+
+          <label>Source Node</label>
+          <input type="text" value="1">
+
+          <button class="run-btn">Run Algorithm</button>
+
+          <label>Playback Speed</label>
+          <input type="range">
+        </div>
+
+        <!-- CENTER VISUAL -->
+        <div class="visual-section">
+          <div class="visual-box">
+            <p>Configure the problem on the left and click "Run Algorithm".</p>
+          </div>
+
+          <div class="step-log">
+            Waiting for algorithm to run...
+          </div>
+        </div>
+
+        <!-- RIGHT PERFORMANCE PANEL -->
+        <div class="performance">
+          <h3>PERFORMANCE</h3>
+          <p>Execution Time -</p>
+          <p>Time Complexity -</p>
+          <p>Space Complexity -</p>
+          <p>Optimal Value -</p>
+          <p>Items -</p>
+          <p>Capacity -</p>
+          <p>Total Steps -</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls">
+    <button>⏮</button>
+    <button>▶</button>
+    <button>⏭</button>
+    <button>⟲</button>
+  </div>
+
+  <script src="vis-network.min.js"></script>
+  <script src="daa.js"></script>
+</body>
+
+</html>
