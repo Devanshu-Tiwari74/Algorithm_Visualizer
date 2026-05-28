@@ -62,7 +62,7 @@ struct DSU
 int main()
 {
     crow::App<CORSHandler> app;
-
+    // Fractional Knapsack problem
     CROW_ROUTE(app, "/api/knapsack").methods(crow::HTTPMethod::Post, crow::HTTPMethod::Options)([](const crow::request &req)
                                                                                                 {
         if (req.method == crow::HTTPMethod::Options) return crow::response(204);
@@ -97,6 +97,7 @@ int main()
         res["totalValue"] = totalValue;
         return crow::response(res); });
 
+    // Dijkstra's algorithm
     CROW_ROUTE(app, "/api/dijkstra").methods(crow::HTTPMethod::Post, crow::HTTPMethod::Options)([](const crow::request &req)
                                                                                                 {
         if (req.method == crow::HTTPMethod::Options) return crow::response(204);
@@ -139,6 +140,7 @@ int main()
         }
         return crow::response(res); });
 
+    // Bellman-Ford algorithm
     CROW_ROUTE(app, "/api/bellmanford").methods(crow::HTTPMethod::Post, crow::HTTPMethod::Options)([](const crow::request &req)
                                                                                                    {
         if (req.method == crow::HTTPMethod::Options) return crow::response(204);
@@ -169,6 +171,7 @@ int main()
         }
         return crow::response(res); });
 
+    // Prim's algorithm
     CROW_ROUTE(app, "/api/prim").methods(crow::HTTPMethod::Post, crow::HTTPMethod::Options)([](const crow::request &req)
                                                                                             {
         if (req.method == crow::HTTPMethod::Options) return crow::response(204);
@@ -224,6 +227,7 @@ int main()
         res["totalWeight"] = totalWeight;
         return crow::response(res); });
 
+    // kruskal's algorithm
     CROW_ROUTE(app, "/api/kruskal").methods(crow::HTTPMethod::Post, crow::HTTPMethod::Options)([](const crow::request &req)
                                                                                                {
         if (req.method == crow::HTTPMethod::Options) return crow::response(204);
@@ -261,6 +265,7 @@ int main()
         res["totalWeight"] = totalWeight;
         return crow::response(res); });
 
+    // Activity Selection Problem
     CROW_ROUTE(app, "/api/activity").methods(crow::HTTPMethod::Post, crow::HTTPMethod::Options)([](const crow::request &req)
                                                                                                 {
         if (req.method == crow::HTTPMethod::Options) return crow::response(204);
@@ -293,6 +298,7 @@ int main()
         res["count"] = count;
         return crow::response(res); });
 
+    // Matrix Chain Multiplication
     CROW_ROUTE(app, "/api/mcm").methods(crow::HTTPMethod::Post, crow::HTTPMethod::Options)([](const crow::request &req)
                                                                                            {
         if (req.method == crow::HTTPMethod::Options) return crow::response(204);
