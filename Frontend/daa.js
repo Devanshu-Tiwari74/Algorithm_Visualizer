@@ -1,3 +1,4 @@
+console.log("DAA.JS LOADING - START");
 const algoButtons = document.querySelectorAll(".sidebar button");
 const runBtn = document.querySelector(".run-btn");
 const visualBox = document.querySelector(".visual-box");
@@ -7,6 +8,7 @@ const inputPanel = document.querySelector(".input-panel");
 const mainHeading = document.querySelector(".top-bar h1");
 const mainSubheading = document.querySelector(".top-bar p");
 const stepLog = document.querySelector(".step-log");
+console.log("DAA.JS - VARIABLES INITIALIZED");
 
 // PERFORMANCE FIELDS
 const perf = document.querySelector(".performance");
